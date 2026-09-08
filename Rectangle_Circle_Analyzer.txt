@@ -1,0 +1,44 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Input
+        Console.Write("Enter rectangle length: ");
+        double length = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Enter rectangle width: ");
+        double width = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Enter circle radius: ");
+        double radius = Convert.ToDouble(Console.ReadLine());
+
+        // Calculations
+        double rectangleArea = length * width;
+        double rectanglePerimeter = 2 * (length + width);
+
+        double circleArea = Math.PI * radius * radius;
+        double circleCircumference = 2 * Math.PI * radius;
+
+        // Display results
+        Console.WriteLine("\n--- Results ---");
+
+        Console.WriteLine("Rectangle Area: " + rectangleArea);
+        Console.WriteLine("Rectangle Perimeter: " + rectanglePerimeter);
+
+        Console.WriteLine("Circle Area: " + circleArea);
+        Console.WriteLine("Circle Circumference: " + circleCircumference);
+
+        // Boolean comparisons
+        bool rectangleAreaGreater = rectangleArea > circleArea;
+        bool rectanglePerimeterGreater = rectanglePerimeter > 100;
+        bool circleAreaGreater = circleArea > 500;
+
+        Console.WriteLine("\n--- Boolean Comparisons ---");
+
+        Console.WriteLine("Rectangle area > Circle area: " + rectangleAreaGreater);
+        Console.WriteLine("Rectangle perimeter > 100: " + rectanglePerimeterGreater);
+        Console.WriteLine("Circle area > 500: " + circleAreaGreater);
+    }
+}
